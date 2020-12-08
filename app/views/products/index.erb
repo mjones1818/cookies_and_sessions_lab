@@ -1,0 +1,12 @@
+<%= form_tag cart_path do %>
+  <%= text_field_tag("product") %>
+  <%= submit_tag("add to cart") %>
+<% end %>
+<br>
+
+<% if !cart.empty? %>
+  <% cart.each do |item| %>
+    <%= item %>
+    <br>
+  <% end %>
+<% end %>
